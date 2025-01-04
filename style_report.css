@@ -1,0 +1,123 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Заголовок */
+
+header {
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    text-align: center;
+    max-width: 90%;
+}
+
+/* Навігаційна панель */
+
+nav {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+nav button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    background-color: rgba(196, 242, 98, 0.796);
+    border: none;
+    padding: 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: all 0s ease-in 0s;
+    border-radius: 24px;
+}
+
+nav button:hover {
+    background-color: rgb(214, 249, 41);
+    color: #010100;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.111);
+    transform: translateY(-2px);
+}
+
+/* Основний контейнер */
+main {
+    display: flex;
+    padding: 20px;
+}
+
+/* Стиль зображень */
+
+.image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    height: auto;
+}
+
+.screen-img {
+    max-width: 50%;
+    max-height: 100%;
+    object-fit: contain;
+    margin: 0 10px;
+}
+
+/* Лабораторні роботи */
+.text-container {
+    background-color: rgba(196, 242, 98, 0.096);
+    padding: 20px;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+
+.container-section {
+    display: none;
+    width: 100%;
+}
+
+.container-section.active {
+    display: flex;
+    width: 1400px;
+}
+
+/* Бокова панель */
+
+.sidebar {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-right: 20px;
+}
+
+.sidebar button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+    background-color: rgba(196, 242, 98, 0.796);
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 24px;
+}
+
+.sidebar button:hover {
+    background-color: rgb(212, 247, 34);
+    color: #010100;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.111);
+    transform: translateY(-2px);
+}
+
+#structure p {
+    white-space: pre-line;
+}
