@@ -482,7 +482,7 @@
 
       <!-- Лабораторна робота №1.2 -->
 
-      <div id="lab1_2" class="container-section">
+      <div id="lab1_2" class="container-section"> 
 
         <div class="sidebar">
                  <button onclick="openSection('topic_1_2', 'lab1_2')">Тема, мета, місце розташування сайту та звіту</button>
@@ -815,14 +815,235 @@
                 <img src="images_report/img043448.png" alt="Скрін сайту з шрифтом Bad Script" width="70%"/>
             </div>
 
+            <div id="css_table" class="lab1_2-section container-section text-container">
+               
+                <h2>CSS: Шрифти Текст Таблиці Фон Контур Списки CSS Просунутий</h2>
+            
+                <p>У цьому розділі метою є ознайомитись з різними техніками стилізації тексту, таблиць, списків та фонів за
+                    допомогою каскадних таблиць стилів (CSS).</p>
+        
+                <h3>1. Шрифти</h3>
+                <p>Для стилізації тексту на сайті було використвно шрифт <strong>Bad Spirit</strong> з Google Fonts, а також стильове
+                оформлення для заголовків і абзаців.</p>
+                <pre><code>
+                                            
+                    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://fonts.googleapis.com/css?family=Trirong&quot;&gt;
+                                        
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                        font-family: &quot;Bad Script&quot;, serif;
+                        outline: none;
+                        border: none;
+                        text-decoration: none;
+                        transition: .2s linear;
+                    }
+                    </code></pre>
+        
+                <h3>2. Фон</h3>
+                <p>Фон для елементів може бути однотонним або градієнтним. Ось приклад градієнтного фону для секцій:
+                </p>
+                <pre><code>
+                           .btn:hover {
+                           background: #666;
+                           }
+                           </code></pre>
+
+                <h3>3. Контури</h3>
+                <p>Контури додаються до елементів за допомогою властивості <code>text-shadow</code> для тексту і
+                <code>box-shadow</code> для контейнерів.
+                </p>
+                <pre><code>
+                 h1 {
+                 text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+                 }
+                                                                    
+                .content-section {
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                }
+                </code></pre>
+                                            
+                <h3>4. Колір тексту</h3>
+                <p>Для зміни кольору тексту використовуються властивості <code>color</code> та
+                    <code>background-color</code>.
+                    Приклади:
+                </p>
+                <pre><code>
+                    .text-container {
+                        background-color: rgba(196, 242, 98, 0.096);
+                        padding: 20px;
+                        border-radius: 5px;
+                        margin: 0;
+                        width: 100%;
+                        box-sizing: border-box;
+                    }
+                    </code></pre>
+
+                    <h3>5. Багаторівневі списки</h3>
+                    <p>Для багаторівневих списків можна застосовувати відступи та зміщення за допомогою властивості
+                        <code>padding</code>
+                        та <code>margin</code>.
+                    </p>
+                    <pre><code>
+                                                ul {
+                                                    list-style-type: none;
+                                                }
+                                            
+                                                li {
+                                                    margin: 5px 0;
+                                                }
+                                            
+                                                li ul {
+                                                    margin-left: 20px;
+                                                }
+                                                </code></pre>
 
 
+                <h3>6. CSS-властивості для таблиць</h3>
+                <p>Таблиці можна стилізувати за допомогою CSS, додаючи контури, відступи та змінюючи кольори фону.
+                </p>
+                <pre><code>
+                                            table {
+                                                width: 100%;
+                                                border-collapse: collapse;
+                                            }
+                                        
+                                            th, td {
+                                                border: 1px solid #ccc;
+                                                padding: 10px;
+                                                text-align: left;
+                                            }
+                                        
+                                            th {
+                                                background-color: #3498db;
+                                                color: white;
+                                            }
+                                        
+                                            td {
+                                                background-color: #ecf0f1;
+                                            }
+                                            </code></pre>
+            </div>
+
+            <div id="item10" class="lab1_2-section container-section text-container">
+                <h3>CSS Просунутий</h3>
+                <p>Просунуте використання CSS включає застосування анімацій, псевдокласів та псевдоелементів. Ось
+                    приклад анімації  для кнопки:</p>
+                <pre><code>
+                    .btn {
+                        display: inline-block;
+                        margin-top: 1rem;
+                        border-radius: 5rem;
+                        background: #333;
+                        color: #fff;
+                        padding: 1rem 3rem;
+                        cursor: pointer;
+                        font-size: 1.8rem;
+                    }
+                    
+                    .btn:hover {
+                        background: #666;
+                    }
+                            </code></pre>
+        
+                <h3>Приклад таблиці</h3>
+                <pre><code>
+                &lt;style&gt;
+                table {
+                  border-collapse: collapse;
+                  width: 50%;
+                }
+                th,
+                td {
+                  text-align: left;
+                  padding: 8px;
+                }
+          
+                tr:nth-child(even) {
+                  background-color: #d6eeee;
+                }
+              &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h2&gt;Таблиця нарахувань заробітної плати&lt;/h2&gt;
+              &lt;table&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;Ім&rsquo;я&lt;/th&gt;
+                  &lt;th&gt;Прізвище&lt;/th&gt;
+                  &lt;th&gt;Зарплата&lt;/th&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Петро&lt;/td&gt;
+                  &lt;td&gt;Гріфанов&lt;/td&gt;
+                  &lt;td&gt;10 000&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Євгенія&lt;/td&gt;
+                  &lt;td&gt;Міхєєва&lt;/td&gt;
+                  &lt;td&gt;15 000&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;
+                  &lt;td&gt;Христина&lt;/td&gt;
+                  &lt;td&gt;Омелянова&lt;/td&gt;
+                  &lt;td&gt;13 000&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr&gt;&lt;/tr&gt;
+              &lt;/table&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+        </code></pre>
 
 
+                <h3>Приклад багаторівневого списку</h3>
+                <pre><code>
+                    &lt;ul&gt;
+                    &lt;li&gt;Перший розділ
+                        &lt;ul&gt;
+                            &lt;li&gt;Підрозділ 1.1&lt;/li&gt;
+                            &lt;li&gt;Підрозділ 1.2&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;Основний розділ 
+                        &lt;ul&gt;
+                            &lt;li&gt;Підрозділ 2.1&lt;/li&gt;
+                            &lt;li&gt;Підрозділ 2.2&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            </code></pre>
+            </div>
 
-
+            <div id="conclusion_1_2" class="lab1_2-section container-section text-container">
+                <h2>Висновки</h2>
+                <p>
+                    У процесі виконання роботи було отримано практичні навички використання каскадних таблиць стилів
+                    (CSS) для
+                    оформлення HTML-документів. Ми розглянули та реалізували такі методи підключення стилів:
+                </p>
+                <ul>
+                    <li>Вбудовані стилі (inline styles) – для одноразового форматування елементів.</li>
+                    <li>Внутрішні стилі (internal styles) – для роботи з окремими сторінками.</li>
+                    <li>Зовнішні стилі (external styles) – для організації та підтримки великих проєктів.</li>
+                    <li>Метод <code>@import</code> – для підключення додаткових файлів стилів.</li>
+                </ul>
+                <p>
+                    Вивчено принципи використання селекторів: тегів, класів, ідентифікаторів, атрибутів, дочірніх та
+                    сусідніх
+                    елементів.
+                </p>
+                <p>
+                    Також застосовано різноманітні властивості CSS для стилізації текстових елементів, списків, фону
+                    та
+                    інтерактивних ефектів.
+                    Висновок: використання CSS дозволяє створювати привабливі, функціональні та зручні для
+                    користувачів
+                    веб-сторінки.
+                </p>
         </div>
-    
+    </div>
+
+
      <!-- Лабораторна робота №2.2 -->
 
      <div id="lab2_2" class="container-section">
