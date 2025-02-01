@@ -4,6 +4,7 @@ body {
     padding: 0;
 }
 
+
 /* Заголовок */
 
 header {
@@ -69,6 +70,14 @@ main {
     object-fit: contain;
     margin: 0 10px;
 }
+
+.img_code {
+
+    width: 80%;
+    height: auto;
+}
+
+
 
 /* Лабораторні роботи */
 .text-container {
