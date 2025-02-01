@@ -1044,6 +1044,406 @@
     </div>
 
 
+      <!-- Лабораторна робота №2.1 -->
+   
+      <div id="lab_1" class="container-section"> 
+
+        <div class="sidebar">
+                 <button onclick="openSection('topic_2_1', 'lab_1')">Тема, мета, місце розташування сайту та звіту</button>
+                 <button onclick="openSection('fixed', 'lab_1')">Фіксована таблична верстка</button>
+                 <button onclick="openSection('float', 'lab_1')">Гумова таблична верстка</button>
+                 <button onclick="openSection('fixedb', 'lab_1')">Фіксована блокова верстка</button>
+                 <button onclick="openSection('floatb', 'lab_1')">Гумова блокова верстка</button>                
+                 <button onclick="openSection('conclusion_2_1', 'lab_1')">Висновок</button>
+             </div>
+     
+             <div id="topic_2_1" class="lab_1-section container-section text-container">
+                 <p><strong>Тема:</strong> ВЕРСТКА HTML-ДОКУМЕНТУ. БЛОКОВА ВЕРСТКА.  ВЕРСТКА ЗАСОБАМИ CSS та FLEXBOX.</p>
+                 <p><strong>Мета:</strong> придбати практичні навички роботи  верстки сторінок засобами CSS, верстки на основі плаваючих елементів, з’ясувати переваги та недоліки типів макетів веб-сторінок
+                 придбати практичні навички роботи  верстки сторінок засобами CSS та FLEXBOX</p>
+                 <a href="https://github.com/ValerieVovdenko/zpi-zp41_appWEB-VovdenkoValeriia-MEU-2025" target="_blank">Посилання на
+                     репозиторій власного WEB-застосунку</a> <br>
+                 <a href="https://valerievovdenko.github.io/zpi-zp41_appWEB-VovdenkoValeriia-MEU-2025/" target="_blank">Посилання на
+                     живу сторінку власного WEB-застосунку</a> <br>
+                 <a href="https://github.com/ValerieVovdenko/zpi-zp41_appRECORD-VovdenkoValeriia-MEU-2025" target="_blank">Посилання на
+                     репозиторій звітного HTML-документа</a> <br>
+                 <a href="https://valerievovdenko.github.io/zpi-zp41_appRECORD-VovdenkoValeriia-MEU-2025/" target="_blank">Посилання на
+                     живу сторінку звітного HTML-документа</a> <br> 
+             </div>
+
+             <div id="fixed" class="lab_1-section container-section text-container">
+                <pre><code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang=&quot;uk&quot;&gt;
+                    &lt;head&gt;
+                        &lt;meta charset=&quot;UTF-8&quot;&gt;
+                        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                        &lt;title&gt;Фіксована таблична верстка&lt;/title&gt;
+                        &lt;style&gt;
+                            table {
+                                width: 400px;
+                                height: 500px;
+                                border-collapse: collapse;
+                            }
+                    
+                            td {
+                                border: 1px solid black;
+                                text-align: center;
+                            }
+                    
+                            .header, header1 {
+                                height: 20px;
+                                border: 1px solid rgb(255, 204, 0);
+                            }
+                    
+                            .footer {
+                                height: 60px;
+                            }
+                    
+                            .header, header1 { background-color: rgb(255, 204, 0); }
+                            .col_1 { background-color: blue; }
+                            .col_3 { background-color: red; }
+                            .col_5 { background-color: white; }
+                            .col_7 { background-color: red; }
+                            .footer { background-color: rgb(255, 204, 0); }
+                    
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    
+                    &lt;body&gt;
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;4&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;3&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                    
+                            &lt;tr&gt;
+                                &lt;td class=&quot;header1&quot; colspan=&quot;4&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;3&quot;&gt;1&lt;/td&gt;
+                            &lt;/tr&gt;
+                    
+                            &lt;tr&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;4&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;3&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                    
+                            &lt;tr class=&quot;main&quot;&gt;
+                                &lt;td class=&quot;col_1&quot; rowspan=&quot;1&quot;&gt;2&lt;/td&gt;
+                                &lt;td class=&quot;col_2&quot; style=&quot;width: 10px;&quot; rowspan=&quot;1&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;col_3&quot; rowspan=&quot;1&quot;&gt;3&lt;/td&gt;
+                                &lt;td class=&quot;col_4&quot; style=&quot;width: 10px;&quot; rowspan=&quot;1&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;col_5&quot; rowspan=&quot;1&quot;&gt;4&lt;/td&gt;
+                                &lt;td class=&quot;col_6&quot; style=&quot;width: 10px;&quot; rowspan=&quot;1&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;col_7&quot; rowspan=&quot;1&quot;&gt;5&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td class=&quot;footer&quot; colspan=&quot;7&quot;&gt;6&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt;
+                </code></pre>
+
+                <h3>Графічне зображення результату виконання завдання</h3>
+                <img src="images_report/img112029.png" alt="Фіксована таблична верстка" width="50%">
+            </div>
+
+             <div id="float" class="lab_1-section container-section text-container">
+                <pre><code>
+                    &lt;!DOCTYPE html&gt;
+                    &lt;html lang=&quot;uk&quot;&gt;
+                    &lt;head&gt;
+                        &lt;meta charset=&quot;UTF-8&quot;&gt;
+                        &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+                        &lt;title&gt;Гумова таблична верстка&lt;/title&gt;
+                        &lt;style&gt;
+                            table {
+                                width: 30%;
+                                height: 70vh;
+                                border-collapse: collapse;
+                            }
+                    
+                            td {
+                                border: 1px solid black;
+                                text-align: center;
+                            }
+                    
+                            .header, header1 {
+                                height: 20px;
+                                border: 1px solid rgb(255, 204, 0);
+                            }
+                    
+                            .footer {
+                                height: 60px;
+                            }
+                    
+                            .header, header1 { background-color: rgb(255, 204, 0); }
+                            .col_1 { background-color: blue; }
+                            .col_3 { background-color: red; }
+                            .col_5 { background-color: white; }
+                            .col_7 { background-color: red; }
+                            .footer { background-color: rgb(255, 204, 0); }
+                    
+                        &lt;/style&gt;
+                    &lt;/head&gt;
+                    
+                    &lt;body&gt;
+                        &lt;table&gt;
+                            &lt;tr&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;4&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;3&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                    
+                            &lt;tr&gt;
+                                &lt;td class=&quot;header1&quot; colspan=&quot;4&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;3&quot;&gt;1&lt;/td&gt;
+                            &lt;/tr&gt;
+                    
+                            &lt;tr&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;4&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;header&quot; colspan=&quot;3&quot;&gt;&lt;/td&gt;
+                            &lt;/tr&gt;
+                    
+                            &lt;tr class=&quot;main&quot;&gt;
+                                &lt;td class=&quot;col_1&quot; rowspan=&quot;1&quot;&gt;2&lt;/td&gt;
+                                &lt;td class=&quot;col_2&quot; style=&quot;width: 10px;&quot; rowspan=&quot;1&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;col_3&quot; rowspan=&quot;1&quot;&gt;3&lt;/td&gt;
+                                &lt;td class=&quot;col_4&quot; style=&quot;width: 10px;&quot; rowspan=&quot;1&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;col_5&quot; rowspan=&quot;1&quot;&gt;4&lt;/td&gt;
+                                &lt;td class=&quot;col_6&quot; style=&quot;width: 10px;&quot; rowspan=&quot;1&quot;&gt;&lt;/td&gt;
+                                &lt;td class=&quot;col_7&quot; rowspan=&quot;1&quot;&gt;5&lt;/td&gt;
+                            &lt;/tr&gt;
+                            &lt;tr&gt;
+                                &lt;td class=&quot;footer&quot; colspan=&quot;7&quot;&gt;6&lt;/td&gt;
+                            &lt;/tr&gt;
+                        &lt;/table&gt;
+                    &lt;/body&gt;
+                    &lt;/html&gt; 
+                </code></pre>
+
+                <h3>Графічне зображення результату виконання завдання</h3>
+                <img src="images_report/img112532.png" alt="Гумова таблична верстка" width="50%">
+            </div>
+
+            <div id="fixedb" class="lab_1-section container-section text-container">
+                <pre><code>
+                    HTML
+                    &lt;div class=&quot;container&quot;&gt;
+                        &lt;div class=&quot;header&quot;&gt;
+                            &lt;div class=&quot;rectangle&quot;&gt;&lt;/div&gt;
+                            1
+                        &lt;/div&gt;
+                        &lt;ul class=&quot;main&quot;&gt;
+                            &lt;li class=&quot;blue&quot;&gt;2&lt;/li&gt;
+                            &lt;li class=&quot;red&quot;&gt;3&lt;/li&gt;
+                            &lt;li class=&quot;white&quot;&gt;4&lt;/li&gt;
+                            &lt;li class=&quot;red&quot;&gt;5&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;div class=&quot;footer&quot;&gt;6&lt;/div&gt;
+                    &lt;/div&gt;  
+                
+            CSS
+                    * {
+                        margin: 0;
+                        padding: 0;
+                    }
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                        color: black;
+                        font-weight: 600;
+                    }
+                    .container {
+                        width: 295px;
+                        margin: 20px auto;
+                        border: 2px solid #616161;
+                        background-color: white;
+                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                        overflow: hidden;
+                    }
+                    .header,
+                    .footer {
+                        width: 100%;
+                        height: 50px;
+                        background-color: #F7CE46;
+                        text-align: center;
+                        line-height: 50px;
+                        position: relative;
+                    }
+                    .header .rectangle {
+                        float: left;
+                        width: 100px;
+                        height: 20px;
+                        margin: 12px;
+                        background-color: white;
+                        border: 2px solid #616161;
+                    }
+                    .header {
+                        border-bottom: 2px solid #616161;
+                    }
+                    .footer {
+                        border-top: 2px solid #616161;
+                    }
+                    .main {
+                        width: 100%;
+                        height: 270px;
+            
+                        li {
+                            float: left;
+                            width: 70px;
+                            height: 100%;
+                            list-style: none;
+                            line-height: 270px;
+                            box-sizing: border-box;
+                            align-items: center;
+                            text-align: center;
+                            border-left: 2px solid #616161;
+                            
+                        }
+            
+                        li:first-child {
+                            border-left: none;
+                        }
+            
+                        li:not(:last-child) {
+                            border-right: 2px solid #616161;
+                            margin-right: 5px;
+                        }
+                    }
+                    .blue {
+                        background-color: #4065F6;
+                    }
+                    .red {
+                        background-color: #EC5E57;
+                    }
+                    .white {
+                        background-color: white;
+                    }
+                    .footer {
+                        clear: both;
+                    }
+            
+                </code></pre>
+
+                <h3>Графічне зображення результату виконання завдання</h3>
+                <img src="images_report/img113955.png" alt="Фіксована блокова верстка" width="50%">
+            </div>
+
+            <div id="floatb" class="lab_1-section container-section text-container">
+                <pre><code>
+                    HTML
+                    &lt;div class=&quot;container&quot;&gt;
+                        &lt;div class=&quot;header&quot;&gt;
+                            &lt;div class=&quot;rectangle&quot;&gt;&lt;/div&gt;
+                            1
+                        &lt;/div&gt;
+                        &lt;ul class=&quot;main&quot;&gt;
+                            &lt;li class=&quot;blue&quot;&gt;2&lt;/li&gt;
+                            &lt;li class=&quot;red&quot;&gt;3&lt;/li&gt;
+                            &lt;li class=&quot;white&quot;&gt;4&lt;/li&gt;
+                            &lt;li class=&quot;red&quot;&gt;5&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;div class=&quot;footer&quot;&gt;6&lt;/div&gt;
+                    &lt;/div&gt;  
+                
+            CSS
+                    body {
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                        color: black;
+                    }
+                    .container {
+                        width: 90%;
+                        max-width: 580px;
+                        margin: 20px auto;
+                        border: 2px solid #616161;
+                        background-color: white;
+                        font-weight: 600;
+                        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+                        overflow: hidden;
+            
+                        * {
+                            margin: 0;
+                            padding: 0;
+                        }
+                    }
+                    .header,
+                    .footer {
+                        width: 100%;
+                        height: 50px;
+                        background-color: #F7CE46;
+                        text-align: center;
+                        line-height: 50px;
+                        position: relative;
+                    }
+                    .header .rectangle {
+                        float: left;
+                        width: 46%;
+                        height: 20px;
+                        margin: 12px;
+                        background-color: white;
+                        border: 2px solid #616161;
+                    }
+                    .header {
+                        border-bottom: 2px solid #616161;
+                    }
+                    .footer {
+                        border-top: 2px solid #616161;
+                    }
+                    .main {
+                        width: 100%;
+                        height: 270px;
+            
+                        li {
+                            float: left;
+                            width: 23.5%;
+                            height: 100%;
+                            list-style: none;
+                            line-height: 270px;
+                            box-sizing: border-box;
+                            align-items: center;
+                            text-align: center;
+                            border-left: 2px solid #616161;
+                            
+                        }
+            
+                        li:first-child {
+                            border-left: none;
+                        }
+            
+                        li:not(:last-child) {
+                            border-right: 2px solid #616161;
+                            margin-right: 2%;
+                        }
+                    }
+                    .blue {
+                        background-color: #4065F6;
+                    }
+                    .red {
+                        background-color: #EC5E57;
+                    }
+                    .white {
+                        background-color: white;
+                    }
+                    .footer {
+                        clear: both;
+                    } 
+                </code></pre>
+
+                <h3>Графічне зображення результату виконання завдання</h3>
+                <img src="images_report/img114755.png" alt="Фіксована гумова верстка" width="50%">
+            </div>
+            <div id="conclusion_2_1" class="lab_1-section container-section text-container">
+                <h2>Висновок</h2>
+                <p>
+                    
+                </p>
+            </div>
+      
+        </div>
+
      <!-- Лабораторна робота №2.2 -->
 
      <div id="lab2_2" class="container-section">
