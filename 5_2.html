@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Контактна форма</title>
+    <link rel="stylesheet" href="CSS5_2/style.css" />
+  </head>
+  <body>
+    <main class="form-wrapper">
+      <h2>Напишіть нам</h2>
+      <form class="contact-form">
+        <div class="input-group">
+          <label for="user-email">Пошта</label>
+          <input
+            type="email"
+            id="user-email"
+            name="email"
+            placeholder="example@example.com"
+            required
+          />
+        </div>
+        <div class="input-group">
+          <label for="user-message">Повідомлення</label>
+          <textarea
+            id="user-message"
+            name="message"
+            rows="6"
+            placeholder="Ваше повідомлення..."
+            required
+          ></textarea>
+        </div>
+        <button type="submit">Надіслати</button>
+      </form>
+    </main>
+    <script src="JS5_2/form.js"></script>
+  </body>
+</html>
