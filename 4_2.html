@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обмін значень</title>
+  </head>
+  <body>
+    <header>
+      <h1>Завдання 2</h1>
+    </header>
+
+    <main>
+      <section class="swap-area">
+        <div class="wrapper">
+          <input type="text" id="fieldOne" placeholder="Введіть перший текст" />
+          <input type="text" id="fieldTwo" placeholder="Введіть другий текст" />
+          <button id="btnExchange">SWAP ME</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      document
+        .getElementById("btnExchange")
+        .addEventListener("click", function () {
+          const fieldA = document.getElementById("fieldOne");
+          const fieldB = document.getElementById("fieldTwo");
+          const buffer = fieldA.value;
+          fieldA.value = fieldB.value;
+          fieldB.value = buffer;
+        });
+    </script>
+  </body>
+</html>
