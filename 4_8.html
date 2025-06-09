@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Форма авторизації</title>
+    <style>
+      .auth-container {
+        max-width: 320px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f1f8e9;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .auth-container label {
+        display: block;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+
+      .auth-container input {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        margin-bottom: 16px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+      }
+
+      .auth-container button {
+        width: 100%;
+        padding: 10px;
+        background-color: #43a047;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="task">
+        <h3>Завдання 8</h3>
+        <div class="auth-container">
+          <form class="login-form">
+            <label>
+              Email
+              <input type="email" name="email" />
+            </label>
+            <label>
+              Password
+              <input type="password" name="password" />
+            </label>
+            <button type="submit">Log in</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const form = document.querySelector(".login-form");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const { email, password } = form.elements;
+
+        const emailValue = email.value.trim();
+        const passwordValue = password.value.trim();
+
+        if (!emailValue || !passwordValue) {
+          alert("All form fields must be filled in");
+          return;
+        }
+
+        const data = {
+          email: emailValue,
+          password: passwordValue,
+        };
+
+        console.log(data);
+        form.reset();
+      });
+    </script>
+  </body>
+</html>
