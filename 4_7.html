@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Категорії</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #e8f5e9;
+        margin: 0;
+        padding: 20px;
+      }
+
+      .task {
+        background-color: #c8e6c9;
+        padding: 20px;
+        border-radius: 12px;
+      }
+
+      .container {
+        background-color: #a5d6a7;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      ul#categoryList {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      .group {
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        padding: 10px 15px;
+        border-radius: 8px;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .group h2 {
+        margin-top: 0;
+        color: #2e7d32;
+      }
+
+      .group ul {
+        padding-left: 20px;
+      }
+
+      .group li {
+        margin: 4px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="task">
+        <h3>Завдання 7</h3>
+        <div class="container">
+          <ul id="categoryList">
+            <li class="group">
+              <h2>Animals</h2>
+              <ul>
+                <li>Cat</li>
+                <li>Hamster</li>
+                <li>Horse</li>
+                <li>Parrot</li>
+              </ul>
+            </li>
+            <li class="group">
+              <h2>Products</h2>
+              <ul>
+                <li>Bread</li>
+                <li>Parsley</li>
+                <li>Cheese</li>
+              </ul>
+            </li>
+            <li class="group">
+              <h2>Technologies</h2>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const allGroups = document.querySelectorAll("#categoryList .group");
+      console.log("Кількість категорій:", allGroups.length);
+
+      allGroups.forEach((el) => {
+        const heading = el.querySelector("h2").innerText;
+        const count = el.querySelectorAll("ul > li").length;
+        console.log(`Категорія: ${heading}\nКількість елементів: ${count}`);
+      });
+    </script>
+  </body>
+</html>
