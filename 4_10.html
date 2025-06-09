@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генератор блоків</title>
+    <style>
+      .block {
+        margin: 4px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Завдання 10</h2>
+      <div class="panel">
+        <input
+          id="amountInput"
+          type="number"
+          min="1"
+          max="100"
+          placeholder="Введи число"
+        />
+        <button id="btn-generate">Create</button>
+        <button id="btn-clear">Destroy</button>
+      </div>
+      <div id="output"></div>
+    </section>
+
+    <script>
+      const randomColor = () =>
+        `#${Math.floor(Math.random() * 16777215)
+          .toString(16)
+          .padStart(6, "0")}`;
+
+      const userInput = document.getElementById("amountInput");
+      const generateBtn = document.getElementById("btn-generate");
+      const clearBtn = document.getElementById("btn-clear");
+      const outputContainer = document.getElementById("output");
+
+      function renderBlocks(count) {
+        outputContainer.innerHTML = "";
+        let currentSize = 30;
+        const readyBlocks = [];
+
+        for (let i = 0; i < count; i++) {
+          const item = document.createElement("div");
+          item.classList.add("block");
+          item.style.width = `${currentSize}px`;
+          item.style.height = `${currentSize}px`;
+          item.style.backgroundColor = randomColor();
+          currentSize += 10;
+          readyBlocks.push(item);
+        }
+
+        outputContainer.append(...readyBlocks);
+      }
+
+      function clearBlocks() {
+        outputContainer.innerHTML = "";
+      }
+
+      generateBtn.addEventListener("click", () => {
+        const number = parseInt(userInput.value.trim());
+        if (number >= 1 && number <= 100) {
+          renderBlocks(number);
+          userInput.value = "";
+        } else {
+          alert("від 1 до 100");
+        }
+      });
+
+      clearBtn.addEventListener("click", clearBlocks);
+    </script>
+  </body>
+</html>
