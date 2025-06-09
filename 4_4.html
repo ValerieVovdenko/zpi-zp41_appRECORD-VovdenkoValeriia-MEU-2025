@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Маніпуляції з блоком</title>
+    <style>
+      .wrapper {
+        padding: 20px;
+        width: fit-content;
+        border-radius: 8px;
+      }
+
+      #box {
+        background-color: #7ff00d;
+        margin-bottom: 20px;
+      }
+
+      .ctrl-btn {
+        padding: 8px 14px;
+        margin: 5px;
+        background-color: #44ab48;
+        color: white;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="task">
+        <h3>Завдання 4</h3>
+        <div class="wrapper">
+          <div id="box" style="width: 100px; height: 100px"></div>
+          <button id="growBtn" class="ctrl-btn">Збільшити</button>
+          <button id="shrinkBtn" class="ctrl-btn">Зменшити</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const box = document.getElementById("box");
+
+      document.getElementById("growBtn").addEventListener("click", () => {
+        const width = parseInt(box.style.width);
+        const height = parseInt(box.style.height);
+        box.style.width = width + 10 + "px";
+        box.style.height = height + 10 + "px";
+      });
+
+      document.getElementById("shrinkBtn").addEventListener("click", () => {
+        const width = parseInt(box.style.width);
+        const height = parseInt(box.style.height);
+        if (width > 10 && height > 10) {
+          box.style.width = width - 10 + "px";
+          box.style.height = height - 10 + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
