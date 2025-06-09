@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Операція зі списком</title>
+    <style>
+      .wrapper {
+        background-color: #f1f8e9;
+        padding: 20px;
+        border-radius: 8px;
+        width: fit-content;
+      }
+
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+      }
+
+      .action-btn {
+        margin-top: 15px;
+        padding: 8px 16px;
+        background-color: #66bb6a;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="task">
+        <h3>Завдання 6</h3>
+        <div class="wrapper">
+          <ul id="valuesList">
+            <li>1</li>
+            <li>4</li>
+            <li>8</li>
+            <li>16</li>
+            <li>20</li>
+            <li>30</li>
+          </ul>
+          <button id="multiplyBtn" class="action-btn">Подвоїти</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const btn = document.getElementById("multiplyBtn");
+      const items = document.querySelectorAll("#valuesList li");
+
+      btn.addEventListener("click", () => {
+        for (const el of items) {
+          const num = Number(el.innerText);
+          if (!isNaN(num)) {
+            el.innerText = num * 2;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
