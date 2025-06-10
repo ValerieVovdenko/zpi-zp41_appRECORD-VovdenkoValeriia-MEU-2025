@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Генератор Обіцянок</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/izitoast/dist/css/iziToast.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        padding-top: 60px;
+        background-color: #eef2f3;
+      }
+
+      .panel {
+        background-color: #ffffff;
+        padding: 24px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        width: 320px;
+      }
+
+      .panel label {
+        font-weight: 600;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .panel input[type="number"],
+      .panel button {
+        padding: 10px;
+        font-size: 15px;
+        border: 1px solid #bbb;
+        border-radius: 5px;
+      }
+
+      .options {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .options legend {
+        font-weight: bold;
+      }
+
+      .panel input[type="radio"] {
+        margin-right: 6px;
+      }
+
+      .panel button {
+        background-color: #00796b;
+        color: white;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.2s ease-in-out;
+      }
+
+      .panel button:hover {
+        background-color: #005f55;
+      }
+    </style>
+  </head>
+  <body>
+    <form class="panel">
+      <label>
+        Затримка (мс)
+        <input type="number" name="time" required />
+      </label>
+
+      <fieldset class="options">
+        <legend>Результат</legend>
+        <label
+          ><input type="radio" name="result" value="success" /> Успішно</label
+        >
+        <label
+          ><input type="radio" name="result" value="fail" /> З помилкою</label
+        >
+      </fieldset>
+
+      <button type="submit">Запустити</button>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/izitoast/dist/js/iziToast.min.js"></script>
+    <script src="handler.js"></script>
+  </body>
+</html>
